@@ -16,7 +16,7 @@ def run_game():
         (ai_settings.screen_width, ai_settings.screen_heigth)
     )
     pygame.display.set_caption("Old Galaxy")
-    ship = Ship(screen)
+    ship = Ship(ai_settings, screen)
 
     while True:
 
