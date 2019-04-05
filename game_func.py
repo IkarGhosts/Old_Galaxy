@@ -20,7 +20,7 @@ def check_keyup_events(event, ship):
         ship.moving_left = False
 
 
-def check_events(ship):
+def check_events(ai_settings, screen, ship, bullets):
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
@@ -31,7 +31,7 @@ def check_events(ship):
             check_keyup_events(event, ship)
 
 
-def update_screen(ai_settings, screen, ship):
+def update_screen(ai_settings, screen, ship, bullets):
 
     screen.fill(ai_settings.bg_color)
     ship.blitme()
